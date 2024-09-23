@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Calculator</title>
+  <style>
+    #calculator {
+  border: 1px solid rgb(187, 183, 183);
+  border-radius: 5px;
+  width: 200px;
+  background-color:thistle;
+  padding: 2px;
+  margin: 20px;
+
+}
+.b{
+  margin-left: 40%;
+  margin-top: 10%;
+  background-color:linen;
+}
+
+
+#display {
+  margin: 10px;
+  width: 85%;
+  font-size: 25px;
+  background-color:lightgray;
+  border-radius: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  width: 45px;
+  height: 45px;
+  margin: 3px;
+}
+
+
+
+
+#hi{
+  background-color:indianred;
+}
+#x1{
+  background-color: aquamarine;
+
+}
+#x2{
+  background-color: rgb(104, 93, 255);
+
+}
+#x3{
+  background-color: rgb(7, 244, 51);
+
+
+}
+#x4{
+  background-color: rgba(250, 167, 79, 0.634);
+
+}
+.button:hover {
+  transform: scale(1.1); 
+  transition: transform 0.2s ease; 
+}
+#hi:hover {
+  background-color: rgb(255, 0, 238);
+}
+
+#x1:hover {
+  background-color: lightblue;
+}
+
+#x2:hover {
+  background-color: lightgreen;
+}
+
+#x3:hover {
+  background-color: yellow;
+}
+
+#x4:hover {
+  background-color: orange;
+}
+
+.yk{
+  height: 50px;
+  width:250px;
+  border: 2px solid black;
+  text-align: center;
+  background-color:paleturquoise;
+  border-radius: 5px;
+ 
+  
+}
+  </style>
+</head>
+<body class="b">
+  <h1 class="yk">CALCULATOR</h1>
+  <div id="calculator">
+    <input type="text" id="display" readonly>
+    <div class="button-container">
+      <button id="hi" class="button"onclick=" currentDisplay = '';document.querySelector('#display').value = currentDisplay;">c</button>
+
+      <button id="x1"class="button" onclick="currentDisplay = currentDisplay + '1'; document.querySelector('#display').value = currentDisplay;">1</button>
+
+      <button id="x1" class="button"onclick="currentDisplay = currentDisplay + '2';document.querySelector('#display').value = currentDisplay;">2</button>
+
+      <button id="x2" class="button"onclick=" currentDisplay = currentDisplay + '+'; document.querySelector('#display').value = currentDisplay; ">+</button>
+
+      <button id="x1" class="button"onclick=" currentDisplay = currentDisplay + '3'; document.querySelector('#display').value = currentDisplay; ">3</button>
+
+      <button id="x1"class="button"onclick=" currentDisplay = currentDisplay + '4'; document.querySelector('#display').value = currentDisplay; ">4</button>
+
+      <button id="x2"class="button"onclick=" currentDisplay = currentDisplay + '-'; document.querySelector('#display').value = currentDisplay; ">-</button> 
+
+      <button id="x1"class="button"onclick="currentDisplay = currentDisplay + '5';document.querySelector('#display').value = currentDisplay;">5</button> 
+
+      <button id="x1"class="button"onclick=" currentDisplay = currentDisplay + '6'; document.querySelector('#display').value = currentDisplay; ">6</button> 
+
+      <button id="x2"class="button"onclick="currentDisplay = currentDisplay + '*';document.querySelector('#display').value = currentDisplay;">*</button>
+
+      <button id="x1"class="button"onclick="currentDisplay = currentDisplay + '7';document.querySelector('#display').value = currentDisplay;">7</button>
+
+      <button id="x1"class="button"onclick="currentDisplay = currentDisplay + '8';document.querySelector('#display').value = currentDisplay;">8</button>
+
+      <button id="x2"class="button"onclick=" currentDisplay = currentDisplay + '/'; document.querySelector('#display').value = currentDisplay; ">/</button>
+      
+            <button id="x1"class="button"onclick="currentDisplay = currentDisplay + '9';document.querySelector('#display').value = currentDisplay;">9</button>
+      
+      <button id="x1"class="button"onclick="currentDisplay = currentDisplay + '0';document.querySelector('#display').value = currentDisplay;">0</button>
+
+      <button id="x3" class="button"onclick="currentDisplay = eval(currentDisplay);document.querySelector('#display').value = currentDisplay;">=</button>
+
+      <button id="x4"class="button"onclick="currentDisplay = currentDisplay + '.';document.querySelector('#display').value = currentDisplay;">.</button>
+    </div>
+  </div>
+  <script>
+    let currentDisplay = '';
+    document.querySelector('#display').value = currentDisplay;
+
+  </script>
+
+</body>
+</html>
